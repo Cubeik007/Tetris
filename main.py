@@ -1,7 +1,3 @@
-from pdb import Restart
-from tarfile import BLOCKSIZE
-from tkinter import LEFT
-from turtle import shape
 import pygame
 import random
 from pygame.locals import *
