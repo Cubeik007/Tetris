@@ -168,7 +168,7 @@ class Game:
       def get_shape(self):
             self.current_shape = self.next_shape[0]
             self.orientation = self.next_shape[1]
-            self.next_shape[0] = 2 #random.randint(0, len(self.shapes)-1)
+            self.next_shape[0] = random.randint(0, len(self.shapes)-1)
             self.next_shape[1] = random.randint(0, len(self.shapes[self.next_shape[0]])-1)
             
 
