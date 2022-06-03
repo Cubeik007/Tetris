@@ -168,7 +168,7 @@ class Game:
       def get_shape(self):
             self.current_shape = self.next_shape[0]
             self.orientation = self.next_shape[1]
-            self.next_shape[0] = 2 #random.randint(0, len(self.shapes)-1)
+            self.next_shape[0] = random.randint(0, len(self.shapes)-1)
             self.next_shape[1] = random.randint(0, len(self.shapes[self.next_shape[0]])-1)
             
 
@@ -220,7 +220,7 @@ class Game:
             if self.coordinates[1]+len(self.my_shape[0]) ==  PLAY_WIDTH_BLOCKS:
                   return None
             for y in range(len(self.my_shape)):
-                  if self.grid[y+self.coordinates[0]][self.coordinates[1]+1] != ".":
+                  if self.grid[y+self.coordinates[0]][self.coordinates[1]+len(self.my_shape[0])] != ".":
                         return None
             self.coordinates[1] += 1
 
@@ -279,6 +279,8 @@ class Game:
             self.orientation = None
             self.my_shape = None
             self.score = 0
+            self.cleared_lines = 0
+            self.level = 0
             self.the_end = False
             self.coordinates =  [0, PLAY_WIDTH_BLOCKS // 2]
 
