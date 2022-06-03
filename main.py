@@ -279,6 +279,7 @@ class Game:
             self.orientation = None
             self.my_shape = None
             self.score = 0
+            self.cleared_lines = 0
             self.the_end = False
             self.coordinates =  [0, PLAY_WIDTH_BLOCKS // 2]
 
